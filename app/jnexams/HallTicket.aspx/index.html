@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jamia Nizamia Hall Ticket</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body style="text-align: center; font-family: sans-serif; padding: 50px;">
+    <h1>Jamia Nizamia Hall Ticket</h1>
+    <h2 id="status">Loading...</h2>
+    <img src="/images/your-image.jpg" alt="Photo" />
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const studentId = urlParams.get('ID');
+        if (studentId) {
+            document.getElementById('status').innerText = "Student ID: " + studentId;
+        } else {
+            document.getElementById('status').innerText = "Error: No ID provided.";
+        }
+    </script>
+</body>
+</html>
