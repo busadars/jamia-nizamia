@@ -1,5 +1,4 @@
 <!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head>
-    <!-- Google tag (gtag.js) -->
     <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-G77HG64P5V"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -11,13 +10,9 @@
     <meta charset="UTF-8"><meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport"><meta property="og:title" content="Jamia Nizamia"><meta property="og:image" content="/images/Jamia-logo_1.jpg"><meta property="og:description" content="Jamia Nizamia"><meta property="og:url" content="http://20.235.245.89/JNExams/"><meta property="og:image:width" content="305"><meta property="og:image:height" content="388"><title>
 	Jamia Nizamia
 </title>
-    <!-- General CSS Files -->
     <link rel="stylesheet" href="/css/app.min.css"><link rel="stylesheet" href="/css/daterangepicker.css"><link rel="stylesheet" href="/css/select2.min.css"><link rel="stylesheet" href="/css/bootstrap-timepicker.min.css"><link rel="stylesheet" href="/css/bootstrap-tagsinput.css">
-    <!-- Template CSS -->
     <link rel="stylesheet" href="/css/style.css"><link rel="stylesheet" href="/css/components.css">
-    <!-- Custom style CSS -->
     <link rel="stylesheet" href="/css/custom.css"><link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico">
-    
     <style>
         .form-group > label {
             font-size: 14px;
@@ -72,14 +67,28 @@ function __doPostBack(eventTarget, eventArgument) {
                             <div class="col-lg-12" style="padding-right: 5px; padding-left: 5px;text-align:center">
                                 <a href="Home.aspx">
                                     <img alt="image" src="/images/Jamia-logo.jpg" class="header-logo" style="height: 65px" align="left">
+                                    
+                                    
                                 </a>
                                 <span id="span_PageHeader" style="color: black; font-size: 15pt; font-weight: bold;line-height:3">Hall Ticket</span>
+                                
+
                             </div>
+                            
+                            
+                            
+                            
+                            
+                            
+
+                            
                         </div>
                     </div>
                 </nav>
                 
     <link rel="stylesheet" href="/css/htprint.css" type="text/css" media="all">
+
+    
 
     <style type="text/css" media="all">
         @media print {
@@ -114,7 +123,6 @@ function __doPostBack(eventTarget, eventArgument) {
         }
     </style>
 
-    <!-- Main Content -->
     <div class="main-content" style="padding-left: 20px; margin-right: 10px; padding-top: 100px; background-color: white !important">
         <section class="section">
             <div class="section-body">
@@ -151,9 +159,9 @@ function __doPostBack(eventTarget, eventArgument) {
                                     </td>
                                     <td style="border-bottom: solid 1px black; text-align: center; padding-right: 5px" colspan="3">
                                         <span id="ContentPlaceHolder1_span_ExamName" style="font-family: Calibri; font-size: 17pt; font-weight: bold">فاضل سوم</span>
-                                         
+                                        &nbsp;
                                         <span id="ContentPlaceHolder1_span_YearID" style="font-size: 17pt; font-weight: bold; display: none">2025-2026</span>
-                                           
+                                        &nbsp;&nbsp;&nbsp;
                                         <span id="ContentPlaceHolder1_span_Notes" style="font-size: 17pt; font-weight: bold">ماہ ذوالحجہ 1447ھ - مئی جون 2026ء</span>
                                     </td>
                                 </tr>
@@ -425,27 +433,9 @@ function __doPostBack(eventTarget, eventArgument) {
                                                 <td style="text-align: center; width: 33%; padding-top: 5px">
                                                     <img src="/images/Sign2025.png" style="width: 130px">
                                                 </td>
-                                                
-                                                <!-- FOOLPROOF IMAGE API QR CODE -->
-                                                <td style="width: 33%; text-align: center; padding-top: 5px; vertical-align: middle;">
-                                                    <img id="dynamic-qrcode" src="" style="width: 100px; height: 100px; display: none;" alt="QR Code" />
-                                                    <script>
-                                                        try {
-                                                            var urlParams = new URLSearchParams(window.location.search);
-                                                            var studentId = urlParams.get('ID');
-                                                            if (studentId) {
-                                                                var qrData = "https://jamianizamia.vercel.app/jnexams/HallTicket.aspx?ID=" + studentId;
-                                                                var qrImg = document.getElementById("dynamic-qrcode");
-                                                                // Use a reliable, free QR Code generation API that returns a direct image
-                                                                qrImg.src = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" + encodeURIComponent(qrData);
-                                                                qrImg.style.display = "inline-block";
-                                                            }
-                                                        } catch(e) {
-                                                            console.error("QR image generation failed", e);
-                                                        }
-                                                    </script>
+                                                <td style="width: 33%; text-align: center; padding: 5px">
+                                                    <img id="my-qr-code" src="https://quickchart.io/qr?size=150&text=Jamia+Nizamia" style="height:100px;width:100px;" alt="QR Code" />
                                                 </td>
-
                                                 <td style="width: 33%; text-align: center; padding-top: 5px" rowspan="2">
                                                     <img src="/images/Stamp.png" style="width: 195px">
                                                 </td>
@@ -503,6 +493,8 @@ function __doPostBack(eventTarget, eventArgument) {
         function PopUp(data) {
             var mywindow = window.open('', 'new div', 'height=600,width=1000');
             mywindow.document.write('<html><head><title></title>');
+            //mywindow.document.write('<link rel="stylesheet" href="/css/htprint.css" type="text/css" />');
+            //mywindow.document.write("<link rel=\"stylesheet\" href=\"/assets/css/app.min.css\" type=\"text/css\"/>");
             mywindow.document.write("<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css\" type=\"text/css\"/>");
             mywindow.document.write("<link rel=\"stylesheet\" href=\"/css/htprint.css\" type=\"text/css\"/>");
             mywindow.document.write('</head><body >');
@@ -511,14 +503,29 @@ function __doPostBack(eventTarget, eventArgument) {
             mywindow.document.close();
             mywindow.focus();
             setTimeout(function () { mywindow.print(); }, 1000);
+            //mywindow.close();
             return true;
         }
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("print").addEventListener("click", function () {
+                createPopup(document.getElementById("content").innerHTML);
+
+            }, false);
+
+        });
 
         function printDiv(divName) {
+
             var printContents = document.getElementById(divName).innerHTML;
+            //w = window.open();
+            //w.document.write(printContents);
+            //w.print();
+            //w.close();
             PopUp(printContents);
+
         }
     </script>
+
 
                 <footer class="main-footer" style="padding-left: 0px">
                     <div class="footer-right" style="padding-left: 10px">
@@ -543,20 +550,44 @@ theForm.onsubmit = WebForm_SaveScrollPositionOnSubmit;
 //]]>
 </script>
 </form>
-    <!-- General JS Scripts -->
     <script src="/js/app.min.js"></script>
-    <!-- JS Libraies -->
     <script src="/js/select2.full.min.js"></script>
     <script src="/js/daterangepicker.js"></script>
     <script src="/js/cleave.min.js"></script>
     <script src="/js/cleave-phone.us.js"></script>
     <script src="/js/bootstrap-timepicker.min.js"></script>
 
-    <!-- Page Specific JS File -->
-    <!-- Template JS File -->
     <script src="/js/scripts.js"></script>
-    <!-- Custom JS File -->
     <script src="/js/custom.js"></script>
 
+    <script>
+        setTimeout(function() {
+            try {
+                // 1. Try to get ID from the URL
+                var urlParams = new URLSearchParams(window.location.search);
+                var studentId = urlParams.get('ID');
+                
+                // 2. Failsafe: If no ID in URL, grab it from the HTML text!
+                if (!studentId) {
+                    var spanEl = document.getElementById('ContentPlaceHolder1_span_AppNo');
+                    if (spanEl) {
+                        studentId = spanEl.innerText.trim();
+                    }
+                }
 
+                // 3. Change the image link
+                if (studentId) {
+                    var qrData = "https://jamianizamia.vercel.app/jnexams/HallTicket.aspx?ID=" + studentId;
+                    var qrImgUrl = "https://quickchart.io/qr?size=150&text=" + encodeURIComponent(qrData);
+                    
+                    var qrImg = document.getElementById("my-qr-code");
+                    if (qrImg) {
+                        qrImg.src = qrImgUrl;
+                    }
+                }
+            } catch(err) {
+                console.error("QR Script Failed:", err);
+            }
+        }, 500);
+    </script>
 </body></html>
